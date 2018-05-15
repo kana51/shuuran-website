@@ -1,0 +1,49 @@
+#logo {
+  width: 100px;
+}
+
+.container {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h4 {
+  font-size: 30px;
+  text-align: left;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+h5 {
+  font-size: 25px;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+
+.content-title {
+  margin-bottom: 80px;
+}
+
+
+@media screen and (max-width: 818px) {
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content-wrapper, .content-wrap{
+    padding: 100px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+
+  h5 {
+    font-size: 18px;
+  }
+
+}

@@ -1,0 +1,486 @@
+@charset "utf-8";
+
+p, a, ul, li, span, h1, h2, h3, h4, h5, figure {
+  padding: 0;
+  margin: 0;
+  font-family: serif;
+  color: #000;
+  font-size: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#blue {
+  color: #337ab7;
+}
+
+ul, li {
+  list-style: none;
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+h3 {
+  font-size: 25px;
+}
+.sp-only {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+
+/* header */
+header {
+  background: rgba(255,255,255,0.4);
+}
+
+#logo {
+  width: 20%;
+  margin: 40px auto;
+}
+
+.menu {
+  overflow: hidden;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.menu a{
+  padding: 15px;
+  color: #3A546B;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+.menu a:hover {
+  color: #707070;
+  border-bottom: 1px solid #707070;
+}
+
+
+
+
+/* top-wrapper */
+.top-wrapper {
+  max-width: 1200px;
+  height: 563px;
+  margin: auto;
+}
+
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 563px;
+  margin: 0;
+}
+
+#slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0.0;
+  width: 100%;
+}
+
+#slideshow img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+
+#slideshow img.last-active {
+   z-index: 9;
+}
+
+
+
+/* content-name */
+.content-name {
+  margin-bottom: 50px;
+}
+
+.content-name h1 {
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+.content-name span {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+}
+
+
+/* search-wrapper */
+
+.wrapper {
+  margin-top: 80px;
+}
+
+.search-content {
+  width: 25%;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.search-content img {
+  width: 100%;
+}
+
+
+figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 2;
+  width: 100%;
+  height: 60px;
+  background: rgba(255,255,255,.7);
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 5px 0;
+  text-align: left;
+}
+
+figure:hover figcaption {
+  right: 100%;
+}
+
+
+figcaption span {
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+figcaption p {
+    font-size: 12px;
+    padding-left: 50px;
+}
+
+
+
+
+/* item-wrapper */
+
+
+#item-img {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+
+.item-contents {
+  display: inline-block;
+  color: #000;
+  width: 20%;
+  margin-bottom: 30px;
+}
+
+.item-contents:hover {
+  opacity: 0.5;
+}
+
+.item-contents p {
+  font-size: 13px;
+}
+
+.btn{
+  border: 2px solid #707070;
+  border-radius: 0;
+  padding: 10px 15px;
+  background: #fff;
+  color: #707070;
+  text-align: center;
+  font-size: 13px;
+  clear: left;
+  margin: 10px 0;
+}
+
+.btn:hover{
+  color: #fff;
+  background:#707070;
+  transition: 0.3s;
+}
+
+
+
+
+/* page-cover */
+.page-cover {
+  max-width: 1200px;
+  margin: 100px auto 0;
+}
+
+.page-cover img {
+  width: 100%;
+}
+
+  /* left */
+
+  .left-column {
+    position: relative;
+    width: 50%;
+    display: inline-block;
+  }
+
+  .left-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+  }
+
+  .left-text h3 {
+    font-family: 'Sawarabi Mincho', serif;
+  }
+
+  /* right */
+  .right-column {
+    position: relative;
+    width: 50%;
+    float: right;
+  }
+
+  .right-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+  }
+
+  .right-text h3 {
+    font-family: 'Sawarabi Mincho', serif;
+  }
+
+  .view-btn {
+    font-size: 12px;
+  }
+
+
+
+/* news-wrapper */
+.post-content li {
+  width: 25%;
+  display: inline-block;
+  margin: 20px;
+}
+
+.post-content li:hover {
+  opacity: 0.5;
+}
+
+.post-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.post-image img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.post-body {
+  text-align: left;
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #707070;
+}
+
+
+
+
+/* contact-wrapper */
+
+.contact-link a{
+  color: #fff;
+  background: #707070;
+  padding: 20px 0;
+  border-radius: 3px;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-link a:hover {
+  background: #b2b2b2;
+  transition: .3s;
+
+}
+
+
+
+
+
+
+  /* sns */
+  #tw {
+    float: left;
+    font-size: 15px;
+    padding: 5px 8px;
+    border: 2px #3A546B solid;
+    border-radius: 5px;
+    color: #3A546B;
+  }
+
+  #fb {
+    float: left;
+    font-size: 15px;
+    padding: 5px 12px;
+    margin-right: 7px;
+    border: 2px #3A546B solid;
+    border-radius: 5px;
+    color: #3A546B;
+  }
+
+  #fb:hover, #tw:hover {
+    color: #707070;
+    border: 2px #707070 solid;
+  }
+
+  .sns {
+    margin-top: 20px;
+    clear: left;
+  }
+
+  .sns li {
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+
+
+
+
+
+
+
+/* page-top */
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#pageTop i {
+  padding-top: 6px
+}
+
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 5px 0 0 1px;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: #3A546B;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+/* footer */
+footer {
+  margin-top: 50px;
+  background-image: url("pics/background-footer.jpg");
+  color: #fff;
+  font-size: 12px;
+}
+
+.footer-left {
+  float: left;
+  padding: 28px 25px;
+  text-align: left;
+}
+
+#footer-logo {
+  width: 65px;
+  margin-left: 10px;
+}
+
+.shop-info {
+  padding-left: 10px;
+}
+
+.contact-link-footer {
+  color: #3A546B;
+}
+
+.contact-link-footer:hover {
+  color: #707070;
+}
+
+.footer-right {
+  float: right;
+  padding: 70px 25px;
+}
+
+
+.footer-menu li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.footer-menu a{
+  color: #fff;
+}
+
+.footer-menu a:hover {
+  color: #707070;
+}

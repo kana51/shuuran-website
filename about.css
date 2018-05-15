@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.about-top {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.page-bg {
+  background: #f8f8f8;
+}
+
+#about-img {
+  width: 30%;
+  margin: 50px 10px 0 0;
+}
+
+.about-text {
+  width: 58%;
+  margin: 150px 0 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.profile {
+  margin: 80px  auto 0;
+  text-align: left;
+  width: 70%;
+}
+
+
+.name, .history{
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 17px;
+}
+
+
+table {
+  font-family: serif;
+  margin: 30px 0;
+}
+
+td {
+  padding: 5px 10px 5px 0;
+}
+
+.history-text{
+  padding: 40px 0;
+}
+
+
+
+@media screen and (max-width: 818px) {
+
+  .about-text {
+    font-size: 12px;
+    margin: 50px 0 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  td {
+    font-size: 11px;
+  }
+
+  #about-img {
+    width: 50%;
+  }
+
+  .about-text {
+    width: 95%;
+    font-size:
+  }
+
+  .profile {
+    width: 90%;
+    font-size: 12px;
+  }
+
+}

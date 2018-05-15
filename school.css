@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+.content-text {
+  width: 90%;
+  padding: 250px 0;
+  background-image: url(./pics/2.png);
+  background-position: right;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.content-text span{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+
+.content-text p {
+  font-size: 13px;
+}
+
+
+/* lesson-schedule */
+.lesson-schedule {
+  width: 75%;
+  margin: 0 auto 10px;
+  text-align: left;
+}
+
+.class {
+  margin-bottom: 50px;
+  background: #f8f8f8;
+  padding: 20px 15px;
+}
+
+.class-last {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.class-text {
+  padding: 20px 0 0;
+}
+
+.class-text li {
+  padding: 10px 0;
+}
+
+
+
+
+@media screen and (max-width: 818px) {
+  .lesson-schedule {
+    width: 90%;
+  }
+
+  .content-text {
+    background-size: 60%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .content-text {
+    width: 100%;
+    padding: 150px 0;
+  }
+
+  .content-text span{
+    font-size: 11px;
+  }
+
+  .content-text p {
+    font-size: 10px;
+  }
+
+  .lesson-schedule {
+    width: 100%;
+  }
+
+  .class-text li {
+    font-size: 12px;
+  }
+
+}

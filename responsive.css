@@ -1,0 +1,335 @@
+/* tablet */
+@media screen and (max-width: 818px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+
+  h2 {
+    font-size: 14px;
+  }
+
+
+  h3 {
+    font-size: 15px;
+  }
+
+
+  .menu a{
+    font-size: 11px;
+    padding: 8px;
+
+  }
+
+
+
+  /* top-wrapper */
+
+  .top-wrapper {
+    height: 390px;
+  }
+
+
+
+  /* search-wrapper */
+  figcaption {
+    height: 40px;
+    padding: 5px 0;
+  }
+
+  figcaption span {
+    font-size: 12px;
+  }
+
+  figcaption p {
+    font-size: 8px;
+  }
+
+
+  /* item-wrapper */
+  .item-contents p {
+    font-size: 10px;
+  }
+
+
+  /* news-wrapper */
+  .post-image {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+
+  /* page-cover */
+  .view-btn {
+    font-size: 10px;
+  }
+
+
+  /* footer */
+  footer {
+    height: 170px;
+    font-size: 12px;
+  }
+
+
+
+    /* footer-left */
+    .footer-left {
+      float: none;
+      padding: 30px 25px 0;
+      text-align: center;
+    }
+
+    .time, .tell {
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+
+    /* footer-right */
+    .footer-right {
+      float: none;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .footer-menu li {
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+}
+
+
+/* mobile */
+@media screen and (max-width: 640px) {
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+    z-index: 999;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+
+  /* header */
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+  }
+
+  #logo-img {
+    height: 40px;
+    margin: 5px 15px;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar-header {
+    height: 50px;
+  }
+
+  .navbar-default {
+    border-radius: 0px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    text-align: center;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover{
+    color: #aaa;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background: #aaa;
+  }
+
+  .nabvar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: #eee;
+  }
+
+
+  /* top-wrapper */
+  .top-wrapper {
+    padding-top: 50px;
+    height: 200px;
+  }
+
+  #slideshow {
+    height: 200px;
+  }
+
+
+  /* search-wrapper */
+  .search-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  figure.snip1384 {
+    float: none;
+    max-width: 90%;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .serach-content img {
+    width: 100%;
+  }
+
+
+  /* item-wrapper */
+  .item-contents {
+    width: 40%;
+  }
+
+
+  /* page-cover */
+  .page-cover {
+    display: table;
+    width: 100%;
+  }
+
+  .page-cover img{
+    width: 100%;
+  }
+
+
+    /* left */
+    .left-column {
+      display: table;
+      width: 100%;
+    }
+
+    /* right */
+    .right-column {
+      width: 100%;
+      float: none;
+    }
+
+
+
+  .view-btn {
+    padding: 2px 12px;
+    font-size: 8px;
+  }
+
+
+  /* news-wrapper */
+  .post-content li {
+    width: 95%;
+    display: inline-block;
+    padding: 0 20px;
+  }
+
+  .post-image {
+    width: 110px;
+    height: 70px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .post-body {
+    float: left;
+  }
+
+  .post-meta {
+    font-size: 10px;
+  }
+
+
+
+  /* contact-wrapper */
+  .contact-link a {
+    width: 80%;
+    font-size: 12px;
+  }
+
+
+  /* footer */
+
+  #footer-logo {
+    width: 100px;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  footer {
+    height: 220px;
+    font-size: 12px;
+  }
+
+  .footer-left {
+    float: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .shop-info {
+    padding: 0;
+  }
+
+  /* footer-sns */
+  .footer-icon {
+    clear: left;
+    margin: 5px auto;
+  }
+
+  .footer-icon li {
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+
+  #fb-footer {
+    font-size: 12px;
+    padding: 3px 8px;
+    border: 2px #fff solid;
+    margin-right: 7px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  #tw-footer {
+    font-size: 12px;
+    padding: 3px 5.5px;
+    margin-right: 7px;
+    border: 2px #fff solid;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  #fb-footer:hover, #tw-footer:hover {
+    color: #707070;
+    border: 2px #707070 solid;
+  }
+
+
+
+}

@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+
+/* main */
+#main {
+  float: left;
+  width: 65%;
+  text-align: left;
+}
+
+
+  .box {
+    margin: 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+
+  }
+
+  .item-image {
+    float: left;
+    width: 315px;
+  }
+
+  .item-image:hover {
+    opacity: 0.7;
+    transition: all 0.4s;
+  }
+
+
+  .item-header {
+    margin-bottom: 15px;
+  }
+
+  .item-header a {
+    font-size: 16px;
+    font-family: serif;
+    color: #333;
+  }
+
+  .item-header a:hover {
+    color: #999;
+    transition: all 0.4s;
+  }
+
+  .item-meta {
+    font-size: 10px;
+    padding: 0 0 7px;
+    color: #999;
+    font-family: serif;
+  }
+
+
+  .item-body p {
+    color: #333;
+    font-size: 14px;
+  }
+
+  .item-body a {
+    border: 2px solid #333;
+    color: #333;
+    padding: 7px;
+    display: inline-block;
+    font-size: 11px;
+    margin-top: 10px
+  }
+
+  .item-body a:hover {
+    border: 2px solid #999;
+    color: #999;
+    transition: all 0.4s;
+  }
+
+
+
+
+
+
+
+
+/* slider */
+#slider {
+  float: right;
+  width: 30%;
+  text-align: left;
+  overflow: hidden;
+}
+
+  .widget-item {
+    margin: 15px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .widget-content {
+    overflow: hidden;
+  }
+
+  .widget-image {
+    float: left;
+    width: 95px;
+  }
+
+  .widget-image:hover {
+    opacity: 0.7;
+    transition: all 0.4s;
+  }
+
+  .widget-body {
+    margin-left: 95px;
+  }
+
+  .widget-body a {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: serif;
+  }
+
+  .widget-body a:hover {
+    color: #999;
+    transition: all 0.4s;
+  }
+
+
+  .widget {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .widget h3 {
+    font-size: 17px;
+    padding: 5px 0;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+  }
+
+  .widget a {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: serif;
+  }
+
+  .widget a:hover {
+    color: #999;
+    transition: all 0.4s;
+  }
+
+  .widget-item2 li {
+      margin: 15px 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+  }
+
+
+  #month {
+    margin-top: 15px;
+  }
+
+
+
+  /* search-form */
+  #form02{
+      background-color: white;
+      width: 210px;
+      height: 20px;
+      border: 1px #ddd solid;
+  }
+  #form02 input{
+      vertical-align: top;
+      margin: 0px;
+      height: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+  }
+
+  #input02{
+      border: none;
+      width: 170px;
+      padding-left: 10px;
+  }
+  #submit02{
+      width: 30px;
+      border: none;
+      background-image: url("./pics/search.png");
+      background-position: center;
+      background-size: auto 90%;
+      background-repeat: no-repeat;
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 818px) {
+    .container {
+      width: 90%;
+    }
+
+    .item-image img {
+      width: 200px;
+      height: 150px;
+    }
+
+    .item-image {
+      float: left;
+      width: 215px;
+    }
+
+    .item-body {
+      margin-left: 215px;
+    }
+
+    .item-body p {
+      font-family: serif;
+      color: #333;
+      font-size: 14px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 640px) {
+
+    .box {
+      margin-bottom: 30px;
+    }
+
+    .container {
+      width: 75%;
+    }
+
+    #main{
+      width: 100%;
+    }
+
+    .item-image img {
+      width: 125px;
+      height: 100px;
+    }
+
+    .item-image {
+      float: left;
+      width: 140px;
+    }
+
+    .item-body {
+      margin-left: 140px;
+    }
+
+    .item-body p {
+      font-size: 13px;
+    }
+
+
+
+
+  /* slider */
+
+  #slider{
+    float: none;
+    width: 100%;
+    margin: 0 auto 100px;
+  }
+
+    .widget {
+      width: 100%;
+    }
+
+    .widget h3 {
+      font-size: 15px;
+    }
+
+    .widget-item {
+      margin: 15px 0;
+      padding-bottom: 35px;
+    }
+
+    .widget-body h2 {
+      padding-top: 10px;
+    }
+
+
+    #form02{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #input02{
+        width: 85%;
+    }
+
+    #submit02{
+        width: 10%;
+    }
+
+
+  }
