@@ -7,7 +7,7 @@ $zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
 $addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
 $tel = isset($_POST["tel"])? $_POST["tel"]: "";
 $fax = isset($_POST["fax"])? $_POST["fax"]: "";
-$mail = isset($_POST["mail"])? $_POST["mail"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
 $item = isset($_POST["item"])? $_POST["item"]: "";
 $date = isset($_POST["date"])? $_POST["date"]: "";
 $use = isset($_POST["use"])? $_POST["use"]: "";
@@ -155,7 +155,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <!-- メールアドレス -->
             <dt>メールアドレス<span class="mod-icon-inquiry">必須</span></dt>
             <dd>
-              <input type="email" name="mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES, "utf-8"); ?>" id="input-mail" required>
+              <input type="email" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8"); ?>" id="input-mail" required>
             </dd>
           </dl>
           <dl>

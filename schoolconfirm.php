@@ -6,7 +6,7 @@ $zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
 $addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
 $tel = isset($_POST["tel"])? $_POST["tel"]: "";
 $fax = isset($_POST["fax"])? $_POST["fax"]: "";
-$mail = isset($_POST["mail"])? $_POST["mail"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
 $class = isset($_POST["class"])? $_POST["class"]: "";
 $date = isset($_POST["date"])? $_POST["date"]: "";
 $keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
@@ -99,7 +99,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
 
       <div class="contact-container">
         <div class="mod-dl-table">
-          <form name="form1" action="./schoolsend.php" method="post">
+          <form name="form1" action="./mail2.php" method="post">
 
           <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="hira" value="<?php echo htmlspecialchars($hira, ENT_QUOTES, "utf-8");?>">
@@ -107,7 +107,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
           <input type="hidden" name="addr11" value="<?php echo htmlspecialchars($addr11, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="fax" value="<?php echo htmlspecialchars($fax, ENT_QUOTES, "utf-8");?>">
-          <input type="hidden" name="mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="class" value="<?php echo htmlspecialchars($class, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="date" value="<?php echo htmlspecialchars($date, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="keikenn" value="<?php echo htmlspecialchars($keikenn, ENT_QUOTES, "utf-8");?>">
@@ -155,7 +155,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <!-- メールアドレス -->
             <dt>メールアドレス</dt>
             <dd>
-             <?php echo htmlspecialchars($mail, ENT_QUOTES, "utf-8"); ?>
+             <?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8"); ?>
             </dd>
           </dl>
           <dl>
@@ -183,18 +183,14 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <dt>習ったことのある書体</dt>
             <dd>
               <?php
-                if(empty($_GET["riyu"])) {
-                  echo "選んでいません。";
-                } else{
-                  $riyu = $_GET["riyu"];
-                  $text = array(1 => "楷書", 2=> "行書", 3 => "草書", 4 => "仮名", 5 => "添書", 6 => "隷書", 7 => "その他");
+              if( isset( $_POST[ 'riyu' ] ) ){
+              	$cbx_values = $_POST[ 'riyu' ];
 
-                  foreach ($riyu as $value) {
-                      $select_riyu .= $text[$value]."、";
-                  }
-                  $riyu_list=rtrim($select_riyu,"、");
-                  echo $riyu_list;
-                }
+              	//選択されたラジオボタンの value の内容を表示する
+              	for( $i = 0; $i < count( $cbx_values ); $i ++ ){
+              		print "{$cbx_values[$i]}　";
+              	}
+              }
               ?>
             </dd>
 

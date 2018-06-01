@@ -6,10 +6,10 @@ $zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
 $addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
 $tel = isset($_POST["tel"])? $_POST["tel"]: "";
 $fax = isset($_POST["fax"])? $_POST["fax"]: "";
-$mail = isset($_POST["mail"])? $_POST["mail"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
 $class = isset($_POST["class"])? $_POST["class"]: "";
 $date = isset($_POST["date"])? $_POST["date"]: "";
-$kiekenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
+$keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
 $riyu = isset($_POST["riyu"])? $_POST["riyu"]: "";
 $request = isset($_POST["request"])? $_POST["request"]: "";
 
@@ -140,7 +140,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <!-- メールアドレス -->
             <dt>メールアドレス<span class="mod-icon-inquiry">必須</span></dt>
             <dd>
-              <input type="email" name="mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES, "utf-8"); ?>" id="input-mail" required>
+              <input type="email" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8"); ?>" id="input-mail" required>
             </dd>
           </dl>
           <dl>
@@ -169,7 +169,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
               <input type="radio" name="date" value="火曜19時" id="input-radio">19時
               <br>
               土曜日
-              <input type="radio" name="date" value="土曜13時" checked="checked" id="input-radio">13時
+              <input type="radio" name="date" value="土曜13時" id="input-radio">13時
               <input type="radio" name="date" value="土曜19時" id="input-radio">19時
               <br>
             </dd>
@@ -185,13 +185,13 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <!-- 習ったことのある書体 -->
             <dt>習ったことのある書体<br>（複数選択可）</dt>
             <dd>
-              <input type="checkbox" name="riyu[]" value="1" id="checkbox">楷書<br>
-              <input type="checkbox" name="riyu[]" value="2" id="checkbox">行書<br>
-              <input type="checkbox" name="riyu[]" value="3" id="checkbox">草書<br>
-              <input type="checkbox" name="riyu[]" value="4" id="checkbox">仮名<br>
-              <input type="checkbox" name="riyu[]" value="5" id="checkbox">添書<br>
-              <input type="checkbox" name="riyu[]" value="6" id="checkbox">隷書<br>
-              <input type="checkbox" name="riyu[]" value="7" id="checkbox">その他
+              <input type="checkbox" name="riyu[]" value="楷書" id="checkbox">楷書<br>
+              <input type="checkbox" name="riyu[]" value="行書" id="checkbox">行書<br>
+              <input type="checkbox" name="riyu[]" value="草書" id="checkbox">草書<br>
+              <input type="checkbox" name="riyu[]" value="仮名" id="checkbox">仮名<br>
+              <input type="checkbox" name="riyu[]" value="添書" id="checkbox">添書<br>
+              <input type="checkbox" name="riyu[]" value="隷書" id="checkbox">隷書<br>
+              <input type="checkbox" name="riyu[]" value="その他" id="checkbox">その他
             </dd>
 
             <!-- 要望・質問 -->

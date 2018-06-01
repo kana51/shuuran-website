@@ -1,17 +1,35 @@
+<?php
+//データ取得
+$name = isset($_POST["name"])? $_POST["name"]: "";
+$hira = isset($_POST["hira"])? $_POST["hira"]: "";
+$zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
+$addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
+$tel = isset($_POST["tel"])? $_POST["tel"]: "";
+$fax = isset($_POST["fax"])? $_POST["fax"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
+$selece = isset($_POST["select"])? $_POST["select"]: "";
+$request = isset($_POST["request"])? $_POST["request"]: "";
+
+//画面表示
+?>
+
+
+
 <!doctype html>
 <html lang="jp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>お問い合わせ | 舟蘭 Official Site</title>
+  <title>書道教室のお問い合わせ | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="pagestyle.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="orderform.css">
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
   <header>
@@ -67,34 +85,88 @@
     </div><!-- end sp-only -->
   </header>
 
-
-  <!-- content-title -->
+<!-- order-form -->
   <div class="content-wrapper">
     <div class="container">
       <div class="content-title">
-        <h4>Contact.</h4>
+        <h4>その他のお問い合わせ</h4>
       </div>
-
-      <div class="contact-contents">
-          <div class="contact-link">
-            <a href="orderform.php">
-              オーダーメイドのお問い合わせ
-            </a>
-          </div><br>
-          <div class="contact-link">
-            <a href="schoolform.php">
-              書道教室のお問い合わせ
-            </a>
-          </div><br>
-          <div class="contact-link">
-            <a href="contactform.php">
-              その他のお問い合わせ
-            </a>
-          </div>
-      </div>
-
     </div><!-- end container -->
+
+    <div class="contact-container">
+      <div class="mod-dl-table">
+        <form name="form1" action="./contactconform.php" method="post">
+            <dl>
+            <h5>お客様情報をご記入ください</h5>
+            <!-- お名前 -->
+            <dt>お名前 <span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="text" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, "utf-8"); ?>" id="input-name" required>
+            </dd>
+
+            <!-- おなまえ -->
+            <dt>おなまえ<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="text" name="hira" value="<?php echo htmlspecialchars($hira, ENT_QUOTES, "utf-8"); ?>" id="input-name" required>
+            </dd>
+
+            <!-- 郵便番号 -->
+            <dt>郵便番号<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');" value="<?php echo htmlspecialchars($zip11, ENT_QUOTES, "utf-8"); ?>"  placeholder="(例)1230001" id="zip" required>
+            </dd>
+
+            <!-- 住所 -->
+            <dt>ご住所<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="text" name="addr11" size="60" value="<?php echo htmlspecialchars($addr11, ENT_QUOTES, "utf-8"); ?>" id="input-address" required>
+            </dd>
+
+            <!-- 電話番号 -->
+            <dt>電話番号<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="tel" name="tel" value="<?php echo htmlspecialchars($tel, ENT_QUOTES, "utf-8"); ?>" id="input-tel" placeholder="(例)08012345678" required>
+            </dd>
+
+            <!-- FAX番号 -->
+            <dt>FAX番号</dt>
+            <dd>
+              <input type="tel" name="fax" value="<?php echo htmlspecialchars($fax, ENT_QUOTES, "utf-8"); ?>" id="input-fax" placeholder="(例)08012345678">
+            </dd>
+
+            <!-- メールアドレス -->
+            <dt>メールアドレス<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <input type="email" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8"); ?>" id="input-mail" required>
+            </dd>
+          </dl>
+          <dl>
+            <h5>お問い合わせ内容についてご記入ください</h5>
+
+            <!-- ご希望・ご依頼クラス -->
+            <dt>お問い合わせ種目<span class="mod-icon-inquiry">必須</span></dt>
+            <dd>
+              <select class="custom-select my-1 mr-sm-2" name="select" id="inlineFormCustomSelectPref" value="<?php echo htmlspecialchars($select, ENT_QUOTES, "utf-8"); ?>" required>
+                <option selected>選択してください</option>
+                <option value="オンラインショップについて">オンラインショップについて</option>
+                <option value="商品について">商品について</option>
+                <option value="その他">その他</option>
+              </select>
+            </dd>
+
+
+            <!-- 要望・質問 -->
+            <dt>お問い合わせ内容</dt>
+            <dd>
+              <textarea name="request" placeholder="お問い合わせ内容をご記入ください。" required><?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?></textarea>
+            </dd>
+          </dl>
+          <input type="submit" name="next_btn" value="Submit" class="submit">
+        </form>
+      </div><!-- end mod-dl-table -->
+    </div><!-- end contact-container -->
   </div><!-- end content-wrapper -->
+
 
 
 
@@ -139,6 +211,7 @@
    <!-- script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

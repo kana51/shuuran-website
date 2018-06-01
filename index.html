@@ -330,17 +330,17 @@
     </div>
     <div class="contact-contents">
         <div class="contact-link">
-          <a href="contact1.html">
+          <a href="orderform.php">
             オーダーメイドのお問い合わせ
           </a>
         </div><br>
         <div class="contact-link">
-          <a href="contact2.html">
+          <a href="schoolform.php">
             書道教室のお問い合わせ
           </a>
         </div><br>
         <div class="contact-link">
-          <a href="contact3.html">
+          <a href="contactform.php">
             その他のお問い合わせ
           </a>
         </div>
@@ -399,30 +399,23 @@
 <script type="text/javascript">
    function slideSwitch() {
    var $active = $('#slideshow img.active');
-
    if ( $active.length == 0 ) $active = $('#slideshow img:last');
-
    var $next =  $active.next().length ? $active.next()
      : $('#slideshow img:first');
-
    $active.addClass('last-active');
-
    $next.css({opacity: 0.0})
      .addClass('active')
      .animate({opacity: 1.0}, 1000, function() {
           $active.removeClass('active last-active');
      });
    }
-
    $(function() {
    setInterval( "slideSwitch()", 4000 );
    });
-
  <!-- back to top -->
   $(function(){
   var topBtn=$('#pageTop');
   topBtn.hide();
-
   $(window).scroll(function(){
     if($(this).scrollTop()>80){
       //---- 画面を80pxスクロールしたら、ボタンを表示する
@@ -432,7 +425,6 @@
       topBtn.fadeOut();
     }
   });
-
   topBtn.click(function(){
     $('body,html').animate({
     scrollTop: 0},500);
