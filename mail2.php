@@ -1,6 +1,5 @@
 <?php
 
-
 //mailer利用
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -9,27 +8,25 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-if(isset($_POST['naiyou'])) $naiyou = htmlspecialchars($_POST['naiyou']);
-if(isset($_POST['name'])) $name = htmlspecialchars($_POST['name']);
-if(isset($_POST['hira'])) $hira = htmlspecialchars($_POST['hira']);
-if(isset($_POST['zip11'])) $zip11 = htmlspecialchars($_POST['zip11']);
-if(isset($_POST['addr11'])) $addr11 = htmlspecialchars($_POST['addr11']);
-if(isset($_POST['tel'])) $tel = htmlspecialchars($_POST['tel']);
-if(isset($_POST['fax'])) $fax = htmlspecialchars($_POST['fax']);
-if(isset($_POST['email'])) $email = htmlspecialchars($_POST['email']);
-if(isset($_POST['class'])) $class = htmlspecialchars($_POST['class']);
-if(isset($_POST['date'])) $date = htmlspecialchars($_POST['date']);
-if(isset($_POST['keikenn'])) $keikenn = htmlspecialchars($_POST['keikenn']);
-if( isset( $_POST[ 'riyu' ] ) ){
-  $cbx_values = $_POST[ 'riyu' ];
-
-  //選択されたラジオボタンの value の内容を表示する
-  for( $i = 0; $i < count( $cbx_values ); $i ++ ){
-    print "{$cbx_values[$i]}　";
+$name = isset($_POST["name"])? $_POST["name"]: "";
+$hira = isset($_POST["hira"])? $_POST["hira"]: "";
+$zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
+$addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
+$tel = isset($_POST["tel"])? $_POST["tel"]: "";
+$fax = isset($_POST["fax"])? $_POST["fax"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
+$class = isset($_POST["class"])? $_POST["class"]: "";
+$date = isset($_POST["date"])? $_POST["date"]: "";
+$keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
+$riyu = isset($_POST["riyu"])? $_POST["riyu"]: "";
+  $result = "";
+  if($riyu!=""){
+    foreach($riyu as $row){
+    	$result .= $row."  ";
+    }
   }
-}
-if(isset($_POST['request'])) $request= htmlspecialchars($_POST['request']);
 
+$request = isset($_POST["request"])? $_POST["request"]: "";
 
 
 //社内用メール設定
@@ -51,7 +48,7 @@ $body1 = <<<EOT
 【ご希望クラス】{$class}
 【体験希望日】{$date}
 【書道のご経験】{$keikenn}
-【習ったことのある書体】{$cbx_values}\n
+【習ったことのある書体】{$result}\n
 【ご質問・ご相談】{$request}\n
 EOT;
 
@@ -75,7 +72,7 @@ $body2 =  <<<EOT
 【ご希望クラス】{$class}
 【体験希望日】{$date}
 【書道のご経験】{$keikenn}
-【習ったことのある書体】{$cbx_values}\n
+【習ったことのある書体】{$result}\n
 【ご質問・ご相談】{$request}\n
 
 *********************************************
@@ -87,12 +84,10 @@ EOT;
 
 
 
-// //送信元設定（ITJ）
-$itj_email = "kana.51.tachi@gmail.com";
-$itj_password = "H8Sgi2LS";
+// //送信元設定（舟蘭）
+$itj_email = "shuuran.info@gmail.com";
+$itj_password = "koufuukai2015";
 $itj_name = "舟蘭";
-// $mail->setFrom('@gmail.com', '舟蘭');
-// $mail->addReplyTo('@gmail.com', '舟蘭');
 
 
 //社内(info)/////////////////////////////////////////////////////////////////
@@ -115,7 +110,7 @@ $mail->addReplyTo($itj_email, $itj_name);
 //送信先
 $to = $itj_email;
 $toName = $itj_name;
-$subject = "お問い合わせがありました";
+$subject = "書道教室のお問い合わせがありました";
 $mail->addAddress($itj_email, $itj_name);
 $mail->Subject = $subject;
 $mail->Body = $body1;
@@ -129,6 +124,8 @@ $mail->Body = $body1;
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
+  <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
   <title>舟蘭 | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -154,7 +151,7 @@ $mail->Body = $body1;
             <li><a href="school.html" class="school">School</a></li>
             <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
             <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-            <li><a href="contact.html" class="contact">Contact</a></li>
+            <li><a href="index.html#contact" class="contact">Contact</a></li>
             <li><a href="news.html" class="news">News</a></li>
           </ul>
         </div>
@@ -185,7 +182,7 @@ $mail->Body = $body1;
               <li><a href="school.html" class="school">School</a></li>
               <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
               <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-              <li><a href="contact.html" class="contact">Contact</a></li>
+              <li><a href="index.html#contact" class="contact">Contact</a></li>
               <li><a href="news.html" class="news">News</a></li>
             </ul>
         </div><!-- end top menu -->
@@ -209,27 +206,27 @@ $mail->Body = $body1;
 
           //問い合わせした人///////////////////////////////////////////////////////////////////
           //phpmailer利用
-          $mail = new PHPMailer;
-          $mail->isSMTP();
-          $mail->SMTPDebug = 0;//debugするときは3にするとよい
-          //gmailの設定
-          $mail->Host = 'smtp.gmail.com';
-          $mail->Port = 587;
-          $mail->SMTPSecure = 'tls';
-          $mail->SMTPAuth = true;
-          $mail->CharSet = "UTF-8";
-          $mail->Username = $itj_email;
-          $mail->Password = $itj_password;
-          $mail->setFrom($itj_email, $itj_name);
-          $mail->addReplyTo($itj_email, $itj_name);
-
-          //送信先
-          $to = $email;
-          $toName = $name;
-          $subject = "お問い合わせありがとうございます";
-          $mail->addAddress($to, $toName);
-          $mail->Subject = $subject;
-          $mail->Body = $body2;
+           $mail = new PHPMailer;
+           $mail->isSMTP();
+           $mail->SMTPDebug = 0;//debugするときは3にするとよい
+           //gmailの設定
+           $mail->Host = 'smtp.gmail.com';
+           $mail->Port = 587;
+           $mail->SMTPSecure = 'tls';
+           $mail->SMTPAuth = true;
+           $mail->CharSet = "UTF-8";
+           $mail->Username = $itj_email;
+           $mail->Password = $itj_password;
+           $mail->setFrom($itj_email, $itj_name);
+           $mail->addReplyTo($itj_email, $itj_name);
+          //
+           //送信先
+           $to = $email;
+           $toName = $name;
+           $subject = "お問い合わせありがとうございます";
+           $mail->addAddress($to, $toName);
+           $mail->Subject = $subject;
+           $mail->Body = $body2;
 
           if (!$mail->send()) {
               echo "メール送信に失敗しました。<br>お手数ですが、もう一度最初からやり直してください。" ;
@@ -257,13 +254,13 @@ $mail->Body = $body1;
       <ul class="shop-info">
         <li class="time">10:00 〜 19:00</li>
         <li class="tell">TEL：03−1234−5678</li>
-        <li>お問合せは<a href="#" class="contact-link-footer">こちら</a></li>
+        <li>お問合せは<a href="index.html#contact" class="contact-link-footer">こちら</a></li>
       </ul>
       <div class="footer-icon sp-only">
         <p>＼ Follow Me!! ／</p>
         <ul class="footer-sns">
-          <li><a href="#" id="fb-footer"><i class="fab fa-facebook-f"></i></i></a></li>
-          <li><a href="#" id="tw-footer"><i class="fab fa-twitter"></i></i></a></li>
+          <li><a href="http://www.facebook.com/share.php?u=https://hirashimatakumi.com/blog/1384.html" rel="nofollow" target="_blank" id="fb-footer"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="http://twitter.com/share?text=%E8%88%9F%E8%98%ADOfficialSite&url=https://hirashimatakumi.com/blog/1384.html&hashtags=#shuuran,#舟蘭" rel="nofollow" id="tw-footer"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
     </div>
@@ -274,7 +271,7 @@ $mail->Body = $body1;
         <li><a href="school.html" class="school">School</a></li>
         <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
         <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-        <li><a href="contact.html" class="contact">Contact</a></li>
+        <li><a href="index.html#contact" class="contact">Contact</a></li>
         <li><a href="news.html" class="news">News</a></li>
       </ul>
     </div>

@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
+  <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
   <title>GELLERY | 舟蘭 Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -12,6 +14,7 @@
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="pagestyle.css">
   <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="lightbox2-master/dist/css/lightbox.css">
 </head>
 <body>
   <header>
@@ -28,7 +31,7 @@
             <li><a href="school.html" class="school">School</a></li>
             <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
             <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-            <li><a href="contact.html" class="contact">Contact</a></li>
+            <li><a href="index.html#contact" class="contact">Contact</a></li>
             <li><a href="news.html" class="news">News</a></li>
           </ul>
         </div>
@@ -59,7 +62,7 @@
               <li><a href="school.html" class="school">School</a></li>
               <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
               <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-              <li><a href="contact.html" class="contact">Contact</a></li>
+              <li><a href="index.html#contact" class="contact">Contact</a></li>
               <li><a href="news.html" class="news">News</a></li>
             </ul>
         </div><!-- end top menu -->
@@ -67,49 +70,77 @@
     </div><!-- end sp-only -->
   </header>
 
-  <!-- content-title -->
   <div class="content-wrapper">
     <div class="container">
       <div class="content-title">
         <h4>Gallery.</h4>
       </div>
-      <div class="item-category">
-        <div class="box">
-          <p>小物作品</p>
-          <img src="pics/moji-art/IMG_3693.jpg" width="170" height="170">
-          <img src="pics/moji-art/IMG_3691.jpg" width="170" height="170">
-          <img src="pics/moji-art/IMG_3695.jpg" width="170" height="170">
-        </div>
-        <a href="#" class="btn more-btn">and more > </a>
+      <div class="content-text">
+        作品をお求めの方は<a href="contactform.php">こちら</a>よりお問い合わせください。
       </div>
-      <div class="item-category">
-        <div class="box">
-          <p>額作品</p>
-          <img src="pics/gaku-art/DSC02169.jpg" width="170" height="170">
-          <img src="pics/gaku-art/g001(20cm).jpg" width="170" height="170">
-          <img src="pics/gaku-art/IMG_9409.jpg" width="170" height="170">
-        </div>
-        <a href="#" class="btn more-btn">and more > </a>
-      </div>
-      <div class="item-category">
-        <div class="box">
-          <p>掛軸作品</p>
-          <img src="pics/jiku-art/RIMG0074.jpg" width="170" height="170">
-          <img src="pics/jiku-art/IMG_8345.jpg" width="170" height="170">
-          <img src="pics/jiku-art/DSC03101.jpg" width="170" height="170">
-        </div>
-        <a href="#" class="btn more-btn">and more > </a>
-      </div>
-      <div class="item-category">
-        <div class="box">
-          <p>筆文字作品</p>
-          <img src="pics/moji-art/ft001.jpg" width="170" height="170">
-          <img src="pics/moji-art/ft004.jpg" width="170" height="170">
-          <img src="pics/moji-art/RIMG0148.jpg" width="170" height="170">
-        </div>
-        <a href="#" class="btn more-btn">and more > </a>
-      </div>
-    </div>
+      <ul>
+        <li class="item-contents">
+            <a href="pics/works/work-1.jpg" data-lightbox="group"><img src="pics/works/work-1.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-2.jpg" data-lightbox="group"><img src="pics/works/work-2.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-3.jpg" data-lightbox="group"><img src="pics/works/work-3.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-4.jpg" data-lightbox="group"><img src="pics/works/work-4.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-5.jpg" data-lightbox="group"><img src="pics/works/work-5.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-6.jpg" data-lightbox="group"><img src="pics/works/work-6.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-7.jpg" data-lightbox="group"><img src="pics/works/work-7.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-8.jpg" data-lightbox="group"><img src="pics/works/work-8.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-9.jpg" data-lightbox="group"><img src="pics/works/work-9.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-10.jpg" data-lightbox="group"><img src="pics/works/work-10.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-11.jpg" data-lightbox="group"><img src="pics/works/work-11.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-12.jpg" data-lightbox="group"><img src="pics/works/work-12.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-13.jpg" data-lightbox="group"><img src="pics/works/work-13.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-14.jpg" data-lightbox="group"><img src="pics/works/work-14.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-15.jpg" data-lightbox="group"><img src="pics/works/work-15.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-16.jpg" data-lightbox="group"><img src="pics/works/work-16.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-17.jpg" data-lightbox="group"><img src="pics/works/work-17.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-18.jpg" data-lightbox="group"><img src="pics/works/work-18.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-19.jpg" data-lightbox="group"><img src="pics/works/work-19.jpg" id="item-img"></a>
+        </li>
+        <li class="item-contents">
+            <a href="pics/works/work-20.jpg" data-lightbox="group"><img src="pics/works/work-20.jpg" id="item-img"></a>
+        </li>
+      </ul>
+    </div><!-- end container -->
   </div><!-- end content-wrapper -->
 
 
@@ -126,13 +157,13 @@
         <ul class="shop-info">
           <li class="time">10:00 〜 19:00</li>
           <li class="tell">TEL：03−1234−5678</li>
-          <li>お問合せは<a href="#" class="contact-link-footer">こちら</a></li>
+          <li>お問合せは<a href="index.html#contact" class="contact-link-footer">こちら</a></li>
         </ul>
         <div class="footer-icon sp-only">
           <p>＼ Follow Me!! ／</p>
           <ul class="footer-sns">
-            <li><a href="#" id="fb-footer"><i class="fab fa-facebook-f"></i></i></a></li>
-            <li><a href="#" id="tw-footer"><i class="fab fa-twitter"></i></i></a></li>
+            <li><a href="http://www.facebook.com/share.php?u=https://hirashimatakumi.com/blog/1384.html" rel="nofollow" target="_blank" id="fb-footer"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="http://twitter.com/share?text=%E8%88%9F%E8%98%ADOfficialSite&url=https://hirashimatakumi.com/blog/1384.html&hashtags=#shuuran,#舟蘭" rel="nofollow" id="tw-footer"><i class="fab fa-twitter"></i></a></li>
           </ul>
         </div>
       </div>
@@ -143,7 +174,7 @@
           <li><a href="school.html" class="school">School</a></li>
           <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
           <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-          <li><a href="contact.html" class="contact">Contact</a></li>
+          <li><a href="index.html#contact" class="contact">Contact</a></li>
           <li><a href="news.html" class="news">News</a></li>
         </ul>
       </div>
@@ -154,7 +185,14 @@
    <!-- script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src="lightbox2-master/dist/js/lightbox.js"></script>
+  <script>
+    lightbox.option({
+        /*オプションの記述の例*/
+        'wrapAround': true,
+        'alwaysShowNavOnTouchDevices': true
+        })
+  </script>
 
   </body>
   </html>

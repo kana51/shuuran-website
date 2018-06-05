@@ -21,7 +21,9 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>書道教室のお問い合わせ | Official Site</title>
+  <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
+  <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
+  <title>その他お問い合わせ | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -46,7 +48,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <li><a href="school.html" class="school">School</a></li>
             <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
             <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-            <li><a href="contact.html" class="contact">Contact</a></li>
+            <li><a href="index.html#contact" class="contact">Contact</a></li>
             <li><a href="news.html" class="news">News</a></li>
           </ul>
         </div>
@@ -77,7 +79,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
               <li><a href="school.html" class="school">School</a></li>
               <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
               <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-              <li><a href="contact.html" class="contact">Contact</a></li>
+              <li><a href="index.html#contact" class="contact">Contact</a></li>
               <li><a href="news.html" class="news">News</a></li>
             </ul>
         </div><!-- end top menu -->
@@ -148,15 +150,15 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             <dd>
               <select class="custom-select my-1 mr-sm-2" name="select" id="inlineFormCustomSelectPref" value="<?php echo htmlspecialchars($select, ENT_QUOTES, "utf-8"); ?>" required>
                 <option selected>選択してください</option>
-                <option value="オンラインショップについて">オンラインショップについて</option>
                 <option value="商品について">商品について</option>
+                <option value="当サイトについて">当サイトについて</option>
                 <option value="その他">その他</option>
               </select>
             </dd>
 
 
             <!-- 要望・質問 -->
-            <dt>お問い合わせ内容</dt>
+            <dt>お問い合わせ内容<span class="mod-icon-inquiry">必須</span></dt>
             <dd>
               <textarea name="request" placeholder="お問い合わせ内容をご記入ください。" required><?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?></textarea>
             </dd>
@@ -183,13 +185,13 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
         <ul class="shop-info">
           <li class="time">10:00 〜 19:00</li>
           <li class="tell">TEL：03−1234−5678</li>
-          <li>お問合せは<a href="#" class="contact-link-footer">こちら</a></li>
+          <li>お問合せは<a href="index.html#contact" class="contact-link-footer">こちら</a></li>
         </ul>
         <div class="footer-icon sp-only">
           <p>＼ Follow Me!! ／</p>
           <ul class="footer-sns">
-            <li><a href="#" id="fb-footer"><i class="fab fa-facebook-f"></i></i></a></li>
-            <li><a href="#" id="tw-footer"><i class="fab fa-twitter"></i></i></a></li>
+            <li><a href="http://www.facebook.com/share.php?u=https://hirashimatakumi.com/blog/1384.html" rel="nofollow" target="_blank" id="fb-footer"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="http://twitter.com/share?text=%E8%88%9F%E8%98%ADOfficialSite&url=https://hirashimatakumi.com/blog/1384.html&hashtags=#shuuran,#舟蘭" rel="nofollow" id="tw-footer"><i class="fab fa-twitter"></i></a></li>
           </ul>
         </div>
       </div>
@@ -200,7 +202,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
           <li><a href="school.html" class="school">School</a></li>
           <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
           <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-          <li><a href="contact.html" class="contact">Contact</a></li>
+          <li><a href="index.html#contact" class="contact">Contact</a></li>
           <li><a href="news.html" class="news">News</a></li>
         </ul>
       </div>

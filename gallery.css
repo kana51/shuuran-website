@@ -5,6 +5,16 @@
   margin: 0 auto;
 }
 
+.content-text {
+  font-family: serif;
+  margin-bottom: 50px;
+}
+
+.content-text a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
 .box {
   margin-top: 50px;
 }
@@ -37,6 +47,11 @@
   .item-category {
     width: 100%;
   }
+
+  .content-text {
+    font-size: 9px;
+  }
+
 
   .box img {
     width: 80px;

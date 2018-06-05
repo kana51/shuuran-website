@@ -9,23 +9,23 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 
-if(isset($_POST['naiyou'])) $naiyou = htmlspecialchars($_POST['naiyou']);
-if(isset($_POST['name'])) $name = htmlspecialchars($_POST['name']);
-if(isset($_POST['hira'])) $hira = htmlspecialchars($_POST['hira']);
-if(isset($_POST['zip11'])) $zip11 = htmlspecialchars($_POST['zip11']);
-if(isset($_POST['addr11'])) $addr11 = htmlspecialchars($_POST['addr11']);
-if(isset($_POST['tel'])) $tel = htmlspecialchars($_POST['tel']);
-if(isset($_POST['fax'])) $fax = htmlspecialchars($_POST['fax']);
-if(isset($_POST['email'])) $email = htmlspecialchars($_POST['email']);
-if(isset($_POST['select'])) $select = htmlspecialchars($_POST['select']);
-if(isset($_POST['request'])) $request= htmlspecialchars($_POST['request']);
+$name = isset($_POST["name"])? $_POST["name"]: "";
+$hira = isset($_POST["hira"])? $_POST["hira"]: "";
+$zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
+$addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
+$tel = isset($_POST["tel"])? $_POST["tel"]: "";
+$fax = isset($_POST["fax"])? $_POST["fax"]: "";
+$email = isset($_POST["email"])? $_POST["email"]: "";
+$item = isset($_POST["item"])? $_POST["item"]: "";
+$select = isset($_POST["select"])? $_POST["select"]: "";
+$request = isset($_POST["request"])? $_POST["request"]: "";
 
 
 
 //社内用メール設定
 $body1 = <<<EOT
 ご担当者様
-お客様より以下内容で、書道教室のお問い合わせがありました。
+お客様より以下内容で、お問い合わせがありました。
 ご対応のほどよろしくお願いいたします。
 
 
@@ -71,12 +71,10 @@ EOT;
 
 
 
-// //送信元設定（ITJ）
-$itj_email = "kana.51.tachi@gmail.com";
-$itj_password = "H8Sgi2LS";
+// //送信元設定（舟蘭）
+$itj_email = "shuuran.info@gmail.com";
+$itj_password = "koufuukai2015";
 $itj_name = "舟蘭";
-// $mail->setFrom('@gmail.com', '舟蘭');
-// $mail->addReplyTo('@gmail.com', '舟蘭');
 
 
 //社内(info)/////////////////////////////////////////////////////////////////
@@ -113,6 +111,8 @@ $mail->Body = $body1;
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
+  <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
   <title>舟蘭 | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -138,7 +138,7 @@ $mail->Body = $body1;
             <li><a href="school.html" class="school">School</a></li>
             <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
             <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-            <li><a href="contact.html" class="contact">Contact</a></li>
+            <li><a href="index.html#contact" class="contact">Contact</a></li>
             <li><a href="news.html" class="news">News</a></li>
           </ul>
         </div>
@@ -169,7 +169,7 @@ $mail->Body = $body1;
               <li><a href="school.html" class="school">School</a></li>
               <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
               <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-              <li><a href="contact.html" class="contact">Contact</a></li>
+              <li><a href="index.html#contact" class="contact">Contact</a></li>
               <li><a href="news.html" class="news">News</a></li>
             </ul>
         </div><!-- end top menu -->
@@ -241,13 +241,13 @@ $mail->Body = $body1;
       <ul class="shop-info">
         <li class="time">10:00 〜 19:00</li>
         <li class="tell">TEL：03−1234−5678</li>
-        <li>お問合せは<a href="#" class="contact-link-footer">こちら</a></li>
+        <li>お問合せは<a href="index.html#contact" class="contact-link-footer">こちら</a></li>
       </ul>
       <div class="footer-icon sp-only">
         <p>＼ Follow Me!! ／</p>
         <ul class="footer-sns">
-          <li><a href="#" id="fb-footer"><i class="fab fa-facebook-f"></i></i></a></li>
-          <li><a href="#" id="tw-footer"><i class="fab fa-twitter"></i></i></a></li>
+          <li><a href="http://www.facebook.com/share.php?u=https://hirashimatakumi.com/blog/1384.html" rel="nofollow" target="_blank" id="fb-footer"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="http://twitter.com/share?text=%E8%88%9F%E8%98%ADOfficialSite&url=https://hirashimatakumi.com/blog/1384.html&hashtags=#shuuran,#舟蘭" rel="nofollow" id="tw-footer"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
     </div>
@@ -258,7 +258,7 @@ $mail->Body = $body1;
         <li><a href="school.html" class="school">School</a></li>
         <li><a href="ecstore.html" class="onlinestore">Online Store</a></li>
         <li><a href="ordermade.html" class="ordermade">Order Made</a></li>
-        <li><a href="contact.html" class="contact">Contact</a></li>
+        <li><a href="index.html#contact" class="contact">Contact</a></li>
         <li><a href="news.html" class="news">News</a></li>
       </ul>
     </div>

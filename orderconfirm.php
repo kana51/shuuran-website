@@ -1,5 +1,6 @@
 <?php
 //データ取得
+$naiyou = isset($_POST["naiyou"])? $_POST["naiyou"]: "";
 $name = isset($_POST["name"])? $_POST["name"]: "";
 $hira = isset($_POST["hira"])? $_POST["hira"]: "";
 $zip11 = isset($_POST["zip11"])? $_POST["zip11"]: "";
@@ -7,16 +8,17 @@ $addr11 = isset($_POST["addr11"])? $_POST["addr11"]: "";
 $tel = isset($_POST["tel"])? $_POST["tel"]: "";
 $fax = isset($_POST["fax"])? $_POST["fax"]: "";
 $email = isset($_POST["email"])? $_POST["email"]: "";
-$class = isset($_POST["class"])? $_POST["class"]: "";
+$item = isset($_POST["item"])? $_POST["item"]: "";
 $date = isset($_POST["date"])? $_POST["date"]: "";
-$keikenn = isset($_POST["keikenn"])? $_POST["keikenn"]: "";
-$riyu = isset($_POST["riyu"])? $_POST["riyu"]: "";
+$use = isset($_POST["use"])? $_POST["use"]: "";
+$text = isset($_POST["text"])? $_POST["text"]: "";
+$image = isset($_POST["image"])? $_POST["image"]: "";
+$ready = isset($_POST["ready"])? $_POST["ready"]: "";
+$layout = isset($_POST["layout"])? $_POST["layout"]: "";
 $request = isset($_POST["request"])? $_POST["request"]: "";
+
 //画面表示
-
 ?>
-
-
 
 <!doctype html>
 <html lang="jp">
@@ -26,7 +28,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="書道家「舟蘭」のサイトです。5歳より書道を始め、2016年より活動開始。東京都内で書道教室やワークショップの開講、デザイン書道やロゴなど筆文字の販売をしています。">
   <meta name="keywords" content="書道,書道家,毛筆,硬筆,ペン字,筆文字,デザイン書道,習字,書道教室,ワークショップ,習い事,少人数,書作品,ギフト,プレゼント,企業,インテリア,大人,東京,板橋区,新宿区">
-  <title>書道教室のお問い合わせ | 舟蘭 Official Site</title>
+  <title>オーダーメイドのお問い合わせ | Official Site</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -92,17 +94,17 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
 
 
   <!-- order-form -->
-    <div class="content-wrapper">
+    <div class="wrapper">
       <div class="container">
         <div class="content-title">
-          <h4>体験教室お申込み・ご相談（内容確認）</h4>
+          <h4>お見積り・お問い合わせ</h4>
         </div>
       </div><!-- end container -->
 
       <div class="contact-container">
         <div class="mod-dl-table">
-          <form name="form1" action="./mail2.php" method="post">
-
+          <form name="form1" action="./mail.php" method="post">
+          <input type="hidden" name="naiyou" value="<?php echo htmlspecialchars($naiyou, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="hira" value="<?php echo htmlspecialchars($hira, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="zip11" value="<?php echo htmlspecialchars($zip11, ENT_QUOTES, "utf-8");?>">
@@ -110,12 +112,22 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
           <input type="hidden" name="tel" value="<?php echo htmlspecialchars($tel, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="fax" value="<?php echo htmlspecialchars($fax, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, "utf-8");?>">
-          <input type="hidden" name="class" value="<?php echo htmlspecialchars($class, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="item" value="<?php echo htmlspecialchars($item, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="date" value="<?php echo htmlspecialchars($date, ENT_QUOTES, "utf-8");?>">
-          <input type="hidden" name="keikenn" value="<?php echo htmlspecialchars($keikenn, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="use" value="<?php echo htmlspecialchars($use, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="text" value="<?php echo htmlspecialchars($text, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="image" value="<?php echo htmlspecialchars($image, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="ready" value="<?php echo htmlspecialchars($ready, ENT_QUOTES, "utf-8");?>">
+          <input type="hidden" name="layout" value="<?php echo htmlspecialchars($layout, ENT_QUOTES, "utf-8");?>">
           <input type="hidden" name="request" value="<?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8");?>">
 
           <dl>
+            <dt>お問い合わせ項目</dt>
+            <dd>
+              <?php echo htmlspecialchars($naiyou, ENT_QUOTES, "utf-8"); ?>
+            </dd>
+
+
             <h5>お客様情報をご確認ください</h5>
             <!-- お名前 -->
             <dt>お名前</dt>
@@ -160,53 +172,62 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
             </dd>
           </dl>
           <dl>
-            <h5>ご希望の体験教室についてご確認ください</h5>
+            <h5>商品についてご確認ください</h5>
 
-            <!-- ご希望クラス -->
-            <dt>ご希望クラス</dt>
+            <!-- 依頼予定商品 -->
+            <dt>ご依頼予定商品</dt>
             <dd>
-              <?php echo htmlspecialchars($class, ENT_QUOTES, "utf-8"); ?>
+              <?php echo htmlspecialchars($item, ENT_QUOTES, "utf-8"); ?>
             </dd>
 
-            <!-- 体験希望日 -->
-            <dt>体験希望日</dt>
+            <!-- 納品希望日 -->
+            <dt>納品希望日</dt>
             <dd>
               <?php echo htmlspecialchars($date, ENT_QUOTES, "utf-8"); ?>
             </dd>
 
-            <!-- 書道の経験 -->
-            <dt>書道のご経験</dt>
+            <!-- 用途 -->
+            <dt>ご用途</dt>
             <dd>
-              <?php echo htmlspecialchars($keikenn, ENT_QUOTES, "utf-8"); ?>
+              <?php echo htmlspecialchars($use, ENT_QUOTES, "utf-8"); ?>
             </dd>
 
-            <!-- 習ったことのある書体 -->
-            <dt>習ったことのある書体</dt>
+            <!-- 書く文字 -->
+            <dt>お書きする文字</dt>
             <dd>
-              <?php
-              if($riyu!=""){
-                foreach($riyu as $row){
-                  echo "<input type='hidden' name='riyu[]' value=".$row.">";
-                  echo $row . "  ";
-                }
-              }
-                ?>
+              <?php echo htmlspecialchars($text, ENT_QUOTES, "utf-8"); ?>
             </dd>
 
+            <!-- 希望スタイル -->
+            <dt>希望スタイル</dt>
+            <dd>
+              <?php echo htmlspecialchars($image, ENT_QUOTES, "utf-8"); ?>
+            </dd>
 
+            <!-- 出来上がり -->
+            <dt>出来上がり</dt>
+            <dd>
+              <?php echo htmlspecialchars($ready, ENT_QUOTES, "utf-8"); ?>
+            </dd>
 
-            <!-- 質問・相談 -->
-            <dt>ご質問・ご相談</dt>
+            <!-- レイアウト -->
+            <dt>レイアウト</dt>
+            <dd>
+              <?php echo htmlspecialchars($layout, ENT_QUOTES, "utf-8"); ?>
+            </dd>
+
+            <!-- 要望・質問 -->
+            <dt>ご要望/ご質問</dt>
             <dd>
               <?php echo htmlspecialchars($request, ENT_QUOTES, "utf-8"); ?>
             </dd>
           </dl>
-          <input type="button" name="back_btn" value="戻る" onclick="form1.action='./schoolform.php'; form1.submit();" class="submit">
+          <input type="button" name="back_btn" value="戻る" onclick="form1.action='./orderform.php'; form1.submit();" class="submit">
           <input type="submit" name="next_btn" value="Submit" class="submit">
         </form>
       </div>
     </div>
-  </div><!-- end content-wrapper -->
+  </div><!-- end wrapper -->
 
 
 
