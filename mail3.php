@@ -72,9 +72,9 @@ EOT;
 
 
 // //送信元設定（舟蘭）
-$itj_email = "shuuran.info@gmail.com";
-$itj_password = "koufuukai2015";
-$itj_name = "舟蘭";
+$itj_email = "";
+$itj_password = "";
+$itj_name = "";
 
 
 //社内(info)/////////////////////////////////////////////////////////////////
@@ -117,11 +117,12 @@ $mail->Body = $body1;
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="pagestyle.css">
-  <link rel="stylesheet" href="orderform.css">
-  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/pagestyle.css">
+  <link rel="stylesheet" type="text/css" href="css/orderform.css">
+
+  <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
   <header>
@@ -129,7 +130,7 @@ $mail->Body = $body1;
     <div class="pc-only">
       <div class="container">
         <div class="icon">
-          <a href="index.html"><img src="pics/logo.png" id="logo"></a>
+          <a href="index.html"><img src="pics/page-img/logo.png" id="logo"></a>
         </div>
         <div class="menu">
           <ul>
@@ -152,7 +153,7 @@ $mail->Body = $body1;
         <!-- nav-header -->
         <div class="navbar-header">
             <!-- logo -->
-          <a href="index.html"><img src="pics/logo.png" id="logo-img"></a>
+          <a href="index.html"><img src="pics/page-img/logo.png" id="logo-img"></a>
             <!-- toggle -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
                 <span class="icon-bar"></span>
@@ -237,7 +238,7 @@ $mail->Body = $body1;
 <footer>
   <div class="container">
     <div class="footer-left">
-      <a herf="index.html"><img src="pics/logo.png" id="footer-logo"></a>
+      <a herf="index.html"><img src="pics/page-img/logo.png" id="footer-logo"></a>
       <ul class="shop-info">
         <li class="time">10:00 〜 19:00</li>
         <li class="tell">TEL：03−1234−5678</li>
@@ -267,8 +268,8 @@ $mail->Body = $body1;
 
 
 <!-- script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 </body>

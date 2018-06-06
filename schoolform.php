@@ -28,11 +28,12 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="pagestyle.css">
-  <link rel="stylesheet" href="orderform.css">
-  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/pagestyle.css">
+  <link rel="stylesheet" type="text/css" href="css/orderform.css">
+
+  <script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
   <header>
@@ -40,7 +41,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
     <div class="pc-only">
       <div class="container">
         <div class="icon">
-          <a href="index.html"><img src="pics/logo.png" id="logo"></a>
+          <a href="index.html"><img src="pics/page-img/logo.png" id="logo"></a>
         </div>
         <div class="menu">
           <ul>
@@ -63,7 +64,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
         <!-- nav-header -->
         <div class="navbar-header">
             <!-- logo -->
-          <a href="index.html"><img src="pics/logo.png" id="logo-img"></a>
+          <a href="index.html"><img src="pics/page-img/logo.png" id="logo-img"></a>
             <!-- toggle -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
                 <span class="icon-bar"></span>
@@ -218,7 +219,7 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
   <footer>
     <div class="container">
       <div class="footer-left">
-        <a herf="index.html"><img src="pics/logo.png" id="footer-logo"></a>
+        <a herf="index.html"><img src="pics/page-img/logo.png" id="footer-logo"></a>
         <ul class="shop-info">
           <li class="time">10:00 〜 19:00</li>
           <li class="tell">TEL：03−1234−5678</li>
@@ -248,58 +249,9 @@ $request = isset($_POST["request"])? $_POST["request"]: "";
 
 
    <!-- script -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script>
-      $(function(){
-          $.datepicker.setDefaults( $.datepicker.regional[ "ja" ] );
-          $("#datepicker").datepicker();
-      });
-  </script>
-
-  <script type="text/javascript">
-
-    function slideSwitch() {
-      var $active = $('#slideshow img.active');
-
-      if ( $active.length == 0 ) $active = $('#slideshow img:last');
-
-      var $next =  $active.next().length ? $active.next()
-        : $('#slideshow img:first');
-
-      $active.addClass('last-active');
-
-      $next.css({opacity: 0.0})
-        .addClass('active')
-        .animate({opacity: 1.0}, 1000, function() {
-             $active.removeClass('active last-active');
-      });
-    }
-
-
-    $(function() {
-    setInterval( "slideSwitch()", 4000 );
-    });
-  </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css">
-
-  <script>
-    $(function() {
-      $("#datepicker").datepicker();
-    });
-
-    $(function(){
-      $("#datepicker").datepicker();
-      $("#datepicker").datepicker("option", "showOn", 'both');
-      $("#datepicker").datepicker("option", "buttonImageOnly", true);
-      $("#datepicker").datepicker("option", "buttonImage", 'ico_calendar.png');
-    });
-  </script>
 
 </body>
 </html>
